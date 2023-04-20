@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+	<h1 id="demo"></h1>
+	Enter the deadline<input type="date" id="dateAndTime" min="2022-11-23">
+
+	<p>Click the start to start Game</p>
+
+	<button onclick="myFunction()">Start</button>
+
+	<p id="demo"></p>
+
+	<script>
+		var deadline = 0;
+		function myFunction() {
+			deadline = document.getElementById("dateAndTime").value;
+			console.log(deadline);
+
+			deadlineNew = new Date(deadline).getTime();
+			console.log(deadlineNew)
+			let x = setInterval(function () {
+				let now = new Date().getTime();
+				let t = deadlineNew - now;
+				let days = Math.floor(t / (1000 * 60 * 60 * 24));
+				let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+				let seconds = Math.floor((t % (1000 * 60)) / 1000);
+				document.getElementById("demo").innerHTML = days + "days "
+					+ hours + "hours " + minutes + "minutes " + seconds + "seconds ";
+				if (t < 0) {
+					clearInterval(x);
+					document.getElementById("demo").innerHTML = "GAME OVER";
+				}
+			}, 1000);
+		}
+		
+
+	</script>
+
+</body>
+
+</html>

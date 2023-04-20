@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav_left">
+        <img src="./assets/Bolt_IoT_Final_Logo_-14_150x.png" alt="logo" />
+      </div>
+      <div class="nav_right">
+        <div class="menu-bar-section" onclick="handleMenu()">
+          <div class="menu-bar"></div>
+          <div class="menu-bar"></div>
+          <div class="menu-bar"></div>
+        </div>
+      </div>
+      <div class="menu_item" id="menu_item">
+        <ul class="menu-list">
+          <li>HOME</li>
+          <li>IOT AND ML</li>
+          <li>WEB DEVELOPMENT</li>
+          <li><button>BUY RS. 8,600</button></li>
+        </ul>
+      </div>
+    </nav>
+    <header>
+      <div class="black_overlay"></div>
+      <h1>BOLT TRAININGS</h1>
+      <p>
+        Learn In-demand Skills with Hands-On Projects Excellent for Beginners +
+        Earn Certificate + Internship Assistance
+      </p>
+    </header>
+
+    <div class="traning">
+      <div class="traning_heading">
+        <h2>TRAINING WITH HARDWARE KIT:</h2>
+      </div>
+      <div class="training-section">
+        <div class="training-card">
+          <div class="training-card-img">
+            <img src="./assets/IoTandMLKit.png" alt="" />
+            <div class="training-card-dis">
+              <h1>Internet of Things and Machine Learning</h1>
+              <h2>Rs. 9,600.00</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="software-traning">
+      <div class="software-traning_heading">
+        <h2>TRAINING WITH HARDWARE KIT:</h2>
+      </div>
+      <div class="software-training-section">
+        <div class="software-training-card">
+          <div class="software-training-card-img">
+            <img src="./assets/Web_Development-01.png" alt="" />
+            <div class="software-training-card-dis">
+              <h1>Web Development Training</h1>
+              <h2>Rs. 8,600.00</h2>
+            </div>
+          </div>
+        </div>
+        <div class="software-training-card">
+          <div class="software-training-card-img">
+            <img
+              src="./assets/Shopify_Landing_Page_Product_Images_191a31cb-a99e-4625-a8c7-a2bd6ddbe7d5.png"
+              alt=""
+            />
+            <div class="software-training-card-dis">
+              <h1>Web Development Training</h1>
+              <h2>Rs. 8,600.00</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="award">
+      <div class="award-img">
+        <img src="./assets/HackSpaceMag11_1_200x200.jpeg" alt="" />
+      </div>
+      <div class="award-dis">
+        <div class="award-dis-heading">
+          Learn from Award Winning Industry Experts
+        </div>
+        <div class="award-dis-p">
+          All our trainings are taught by engineers and software developers with
+          more than 10 years of industry experience.
+        </div>
+        <div class="award-subHeading">Awards and Recognition</div>
+        <ol>
+          <li>
+            . We were amongst the startups that accompanied Prime Minister
+            Narendra Modi to the Silicon Valley and were showcased at the first
+            Indo-U.S. Startup Konnect in September 2015.
+          </li>
+          <li>
+            Winner of the DST Lockheed Martin India Innovation Growth program
+            2016
+          </li>
+          <li>Winner of the Economic Times Power of Ideas 2016</li>
+        </ol>
+      </div>
+      <div class="award-dis-p">
+        The Bolt IoT and ML Platform was featured by Raspberry Pi as the best
+        maker hardware in 2018.
+      </div>
+
+      <div class="award-btn">
+        <button>KNOW MORE</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="address">
+        <div class="footer-heading">Address</div>
+        <p>79, 11th Cross Rd, Binnamangala</p>
+        <p>Indiranagar, Bengaluru</p>
+        <p>Karnataka 560038,India</p>
+      </div>
+
+      <div class="contact">
+        <div class="phone"><p>+91) 8881197198</p></div>
+        <div class="email"><p>support@boltiot.com</p></div>
+      </div>
+
+      <div class="refund">
+        <div class="footer-heading">Refund Policy</div>
+        <p>Refund within 10 days of delivery</p>
+      </div>
+
+      <div class="important-links">
+        <div class="footer-heading">Important Links:</div>
+        <p>About us</p>
+        <p>Privacy Policy</p>
+        <p>Terms of service</p>
+        <p>Career</p>
+        <p>Bolt Cloud</p>
+        <p>Resources for Students</p>
+      </div>
+    </footer>
+
+    <div class="whatsapp-icon">
+      <img src="./assets/whatsapp-circle.png" alt="" />
+    </div>
+
+    <script>
+      const menu_item = document.getElementById("menu_item");
+
+      function handleMenu() {
+        console.log("first");
+        menu_item.classList.toggle("expand_menu");
+      }
+    </script>
+  </body>
+</html>

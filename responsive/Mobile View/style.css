@@ -1,0 +1,559 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+  }
+
+  .nav_right .menu-bar-section {
+    position: relative;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .nav_right .menu-bar-section .menu-bar {
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+
+  .menu_item {
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    color: #000000;
+    transition: 0.3s ease;
+  }
+
+  .expand_menu {
+    right: 0;
+  }
+
+  .menu_item ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    text-align: center;
+  }
+
+  .menu_item li {
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .menu_item button {
+    padding: 20px 30px;
+    font-style: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    background: none;
+    border: 1px solid black;
+  }
+
+  header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-image: url(./assets/3_300x300.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 60px;
+  }
+
+  .black_overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.671);
+  }
+
+  header h1 {
+    color: white;
+    z-index: 99;
+  }
+
+  header p {
+    color: white;
+    z-index: 9;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .traning {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .traning_heading h2 {
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .training-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .training-card {
+    width: 300px;
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 20px;
+  }
+
+  .training-card-img img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .training-card-dis {
+    padding: 5px 20px;
+    margin-bottom: 20px;
+  }
+
+  .training-card-dis h1 {
+    font-size: 20px;
+  }
+
+  .training-card-dis h2 {
+    font-size: 18px;
+    color: #454545;
+    margin-top: 5px;
+  }
+
+  /* ================================ */
+
+  .software-traning {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .software-traning_heading h2 {
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .software-training-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .software-training-card {
+    width: 300px;
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 30px;
+  }
+
+  .software-training-card-img img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .software-training-card-dis {
+    padding: 5px 20px;
+    margin-bottom: 20px;
+  }
+
+  .software-training-card-dis h1 {
+    font-size: 20px;
+  }
+
+  .software-training-card-dis h2 {
+    font-size: 18px;
+    color: #454545;
+    margin-top: 5px;
+  }
+
+  .award {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 40px;
+  }
+
+  .award-img {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 30px;
+  }
+
+  .award-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .award-dis-heading {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .award-dis-p {
+    font-weight: 500;
+    color: #454545;
+    line-height: 24px;
+    margin-top: 10px;
+  }
+
+  .award-subHeading {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .award-dis ol li {
+    color: #454545;
+    line-height: 24px;
+    list-style-type: decimal;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .award-btn {
+    width: 100%;
+    float: left;
+  }
+
+  .award-btn button {
+    padding: 15px;
+    margin-top: 20px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+
+    background-color: #557b97;
+  }
+
+  footer {
+    width: 100%;
+    background-color: #000000;
+    padding: 20px 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  footer .contact {
+    margin-top: 20px;
+  }
+
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .whatsapp-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 99;
+    cursor: pointer;
+  }
+}
+
+
+
+@media only screen and (max-width: 320px) {
+
+  nav {
+  
+    padding: 10px 20px;
+  }
+  header {
+  
+    padding: 20px 20px;
+  }
+  header h1 {
+
+   font-size:25px;
+  }
+
+  header p {
+    font-weight: 500;
+   
+  }
+  .traning_heading h2 {
+    font-size: 25px;
+  }
+
+  .training-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .training-card {
+    width: 300px;
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 20px;
+  }
+
+  .training-card-img img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .training-card-dis {
+    padding: 5px 20px;
+    margin-bottom: 20px;
+  }
+
+  .training-card-dis h1 {
+    font-size: 20px;
+  }
+
+  .training-card-dis h2 {
+    font-size: 18px;
+    color: #454545;
+    margin-top: 5px;
+  }
+
+  /* ================================ */
+
+  .software-traning {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .software-traning_heading h2 {
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .software-training-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .software-training-card {
+    width: 300px;
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 30px;
+  }
+
+  .software-training-card-img img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .software-training-card-dis {
+    padding: 5px 20px;
+    margin-bottom: 20px;
+  }
+
+  .software-training-card-dis h1 {
+    font-size: 20px;
+  }
+
+  .software-training-card-dis h2 {
+    font-size: 18px;
+    color: #454545;
+    margin-top: 5px;
+  }
+
+  .award {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 40px;
+  }
+
+  .award-img {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+
+  .award-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .award-dis-heading {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .award-dis-p {
+    font-weight: 500;
+    color: #454545;
+    line-height: 24px;
+    margin-top: 10px;
+  }
+
+  .award-subHeading {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .award-dis ol li {
+    color: #454545;
+    line-height: 24px;
+    list-style-type: decimal;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .award-btn {
+    width: 100%;
+    float: left;
+  }
+
+  .award-btn button {
+    padding: 15px;
+    margin-top: 20px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+
+    background-color: #557b97;
+  }
+
+  footer {
+    width: 100%;
+    background-color: #000000;
+    padding: 20px 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  footer .contact {
+    margin-top: 20px;
+  }
+
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .whatsapp-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 99;
+    cursor: pointer;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 376px) {
+
+  header {
+  
+    padding: 20px 10px;
+  }
+  header h1 {
+
+   font-size:25px;
+  }
+  .award-img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+  }
+
+
+}
+
